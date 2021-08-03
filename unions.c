@@ -6,7 +6,8 @@ union hiddenMessage
 	char chars[21];
 };
 
-int main(){
+int main()
+{
 	union hiddenMessage intCharacters = {{1853169737, 1936876900, 1684955508, 1768838432, 561213039, 0}};
 	printf("[");
 
