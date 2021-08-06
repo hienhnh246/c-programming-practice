@@ -3,6 +3,7 @@
 * Introduction
   1. [Getting Started](#getting-started-with-c)
   2. [Literals and Variables](#literals-and-variables)
+  3. [Data Types](#data-types)
 
 <br/>
 
@@ -265,3 +266,105 @@ Next, we will look at rules for naming variables.
 **Tip:** Always try to give meaningful variable names. This makes your code easier to write and understand. For example, `firstName` is a better variable name than `fn`.
 
 In C programming, every variable must be of a specified type like `int` and `double`. Next, we will learn about these data types in detail.
+
+<br/>
+
+## Data Types
+
+### Introduction
+
+In the last lesson, we learned to create variables. For example,
+
+```c
+int age;
+```
+
+Here, we have used the `int` keyword to declare a variable named `age`. This means the data type of the `age` variable is `int`.
+
+Data types determine the **type** and the **size** of data associated with variables. 
+
+The int type
+* can only store integers
+* size is typically 4 bytes
+
+Next, we will learn about `int` and other data types in detail.
+
+### Data Type: int
+
+* The `int` variables can only store integers.
+* The size of an `int` variable is usually 4 bytes (32 bits).
+* This means it can take `2^32` distinct integer values from **-2147483648** to **2147483647**.
+
+**Example:**
+
+```c
+int age, user_id = 45;
+```
+
+Here, `age` and `user_id` are variables of type `int`. And, we have assigned 45 to the `user_id` variable.
+
+### Data Type: float and double
+
+* Both `float` and `double` variables can store floating-point numbers (decimal numbers).
+* The size of a `double` variable is **8 bytes**. And, the size of a `float` variable is **4 bytes**.
+* This means `double` variables can store numbers with better precision.
+
+**Example:**
+
+```c
+double number1 = 45.67;
+float number2 = 45.67f;
+```
+
+Here, both variables `number1` and `number2` have the same value **45.67**. However, to indicate that **45.67** is a `float` value, we need to use either `f` or `F` at the end like `45.67f`.
+
+> **Note:** Unless you have a specific requirement, always use `double` to create decimal numbers.
+
+**Exponential Numbers**
+
+The `double` data type can also be used to store exponential numbers. For example,
+
+```c
+double factor = 22.44e6;
+```
+
+Here, ``22.44e6`` is equivalent to ``22.44 * 10^6``.
+
+### Data Type: char
+
+* The `char` type variables are used for characters.
+* It's size is 1 byte.
+
+**Example:**
+```c
+char letter = 'g';
+```
+
+> **Note:** To represent a single character, we put the character inside single quotations. For example, `'('`, `'h'`, `'8'` etc.
+
+### long Keyword
+
+If we need to store large numbers, we can use the `long` keyword before `int` and `float`. For example,
+
+```c
+long int number1 = 3147483647;
+long double number2;
+```
+
+* The size of `int` is usually 4 bytes. However, the size of `long int` is usually 8 bytes.
+* The size of `double` is 8 bytes. However, the size of `long double` is at least 10 bytes.
+
+### Summary: Data Types
+
+Here's a summary of all the data types we learned in this chapter.
+
+Type   | Used for | Size
+-------|----------|------
+`int` | integers | usually 4 bytes
+`double` | real numbers | 8 bytes
+`float` | real numbers | 4 bytes
+`char` | characters | 1 bytes
+`long int` | integers | usually 8 bytes
+`long double` | real numbers | at least 10 bytes
+
+Now that we know about values and variables, we will learn to print them in the next chapter.
